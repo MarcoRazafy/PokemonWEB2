@@ -26,7 +26,7 @@ function App() {
 
   useEffect(() => {
     document.documentElement.classList.toggle('dark', isDarkMode);
-    console.log('Dark mode:', isDarkMode); // Pour déboguer
+    console.log('Dark mode toggled:', isDarkMode); // Débogage
   }, [isDarkMode]);
 
   const handleSearch = (term) => {
@@ -60,7 +60,7 @@ function App() {
           <h1 className="text-4xl font-extrabold text-gray-800 dark:text-white tracking-tight text-center flex-1">
             Pokémon Collection
           </h1>
-          <div className="w-10" /> {/* Espace vide pour équilibrer la disposition */}
+          <div className="w-10" />
         </div>
         <SearchBar onSearch={handleSearch} />
         <TypeFilter onFilter={handleTypeFilter} />
